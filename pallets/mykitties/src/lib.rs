@@ -148,6 +148,8 @@ pub mod pallet {
 			let kitty_id = Self::mint(&sender, None, None);
 			Ok(())
 		}
+        
+        // TODO Part III: set_price
 
 		#[pallet::weight(100)]
 		pub fn set_price(
@@ -167,6 +169,8 @@ pub mod pallet {
 
 			Ok(())
 		}
+
+        // TODO Part III: transfer_kitty
 
 		#[pallet::weight(100)]
 		pub fn transfer_kitty(
@@ -189,6 +193,8 @@ pub mod pallet {
 
 			Ok(())
 		}
+
+        // TODO Part III: buy_kitty
 
 		#[pallet::weight(100)]
 		pub fn buy_kitty(
@@ -225,6 +231,8 @@ pub mod pallet {
 			Ok(())
 		}
 
+        // TODO Part III: breed_kitty
+
 		#[pallet::weight(100)]
 		pub fn breed_kitty(origin: OriginFor<T>, kid1: T::Hash, kid2: T::Hash) -> DispatchResult {
 			let breeder = ensure_signed(origin)?;
@@ -236,14 +244,7 @@ pub mod pallet {
 
 			Ok(())
 		}
-
-		// TODO Part III: set_price
-
-		// TODO Part III: transfer
-
-		// TODO Part III: buy_kitty
-
-		// TODO Part III: breed_kitty
+	
 	}
 
 	impl<T: Config> Kitty<T> {
