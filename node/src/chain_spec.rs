@@ -151,6 +151,9 @@ fn testnet_genesis(
 			// Assign network admin rights.
 			key: Some(root_key),
 		},
+		//kitties: KittiesConfig {
+		//	kitties: vec![],
+		//},
 		transaction_payment: Default::default(),
 	}
 }
